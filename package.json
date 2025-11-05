@@ -1,6 +1,6 @@
 {
     "name": "@techeduhelper/react-advanced-table",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A React component library for advanced table functionalities with drag-and-drop, filtering, and theming support.",
     "main": "dist/react-advanced-table.umd.js",
     "module": "dist/react-advanced-table.es.js",
