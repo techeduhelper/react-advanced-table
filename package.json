@@ -1,0 +1,57 @@
+{
+    "name": "@yourname/react-advanced-table",
+    "version": "1.0.0",
+    "description": "A React component library for advanced table functionalities with drag-and-drop, filtering, and theming support.",
+    "main": "dist/react-advanced-table.umd.js",
+    "module": "dist/react-advanced-table.es.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "typecheck": "tsc --noEmit",
+        "prepare": "npm run build"
+    },
+    "peerDependencies": {
+        "react": ">=18.0.0",
+        "react-dom": ">=18.0.0"
+    },
+    "dependencies": {
+        "@dnd-kit/core": "^6.3.1",
+        "@dnd-kit/sortable": "^10.0.0",
+        "@tanstack/react-table": "^8.21.3"
+    },
+    "devDependencies": {
+        "@types/react": "^19.2.2",
+        "@types/react-dom": "^19.2.2",
+        "@vitejs/plugin-react": "^5.1.0",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "typescript": "^5.9.3",
+        "vite": "^7.1.12",
+        "vite-plugin-dts": "^4.5.4"
+    },
+    "keywords": [
+        "react",
+        "table",
+        "drag-drop",
+        "dnd",
+        "typescript",
+        "react-table",
+        "components",
+        "draggable-table",
+        "filter-table",
+        "ui-library"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yourname/react-advanced-table.git"
+    },
+    "author": "Your Name",
+    "license": "MIT",
+    "homepage": "https://github.com/yourname/react-advanced-table#readme",
+    "bugs": {
+        "url": "https://github.com/yourname/react-advanced-table/issues"
+    }
+}

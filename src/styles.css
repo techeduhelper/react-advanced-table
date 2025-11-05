@@ -1,0 +1,40 @@
+:root {
+    --rat-table-bg: #ffffff;
+    --rat-header-bg: #f3f4f6;
+    --rat-row-hover-bg: #f9fafb;
+    --rat-text-color: #0f172a;
+    --rat-border-color: #e5e7eb;
+    --rat-header-text-color: #111827;
+    --rat-border-radius: 8px;
+}
+
+.rat-container {
+    background: var(--rat-table-bg);
+    color: var(--rat-text-color);
+    border: 1px solid var(--rat-border-color);
+    border-radius: var(--rat-border-radius);
+    overflow: auto;
+}
+
+.rat-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.rat-th {
+    background: var(--rat-header-bg);
+    color: var(--rat-header-text-color);
+    padding: 8px 12px;
+    text-align: left;
+    user-select: none;
+}
+
+.rat-td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--rat-border-color);
+}
+
+.rat-row:hover {
+    background: var(--rat-row-hover-bg);
+}
