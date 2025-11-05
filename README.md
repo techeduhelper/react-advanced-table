@@ -5,38 +5,66 @@ A highly customizable and performant table component for React applications.
 ## Features
 
 - Sorting, filtering, and pagination
+- Draggable column reordering
 - Custom cell rendering
-- Row selection and actions
-- Virtualized rendering for large datasets
+- Column filtering
+- Client-side pagination
 - Responsive design
+- Built on @tanstack/react-table and @dnd-kit
+- TypeScript support
 
 ## Installation
 
 ```bash
-npm install react-advanced-table
+npm install @techeduhelper/react-advanced-table @tanstack/react-table @dnd-kit/core @dnd-kit/sortable
 ```
 
 ## Usage
 
-```jsx
-import AdvancedTable from 'react-advanced-table';
+```tsx
+import { AdvancedTable } from '@techeduhelper/react-advanced-table';
+import { ColumnDef } from '@tanstack/react-table';
 
-const columns = [
-    { Header: 'Name', accessor: 'name' },
-    { Header: 'Age', accessor: 'age' },
-    // Add more columns as needed
+type Person = {
+    name: string;
+    age: number;
+};
+
+const columns: ColumnDef<Person>[] = [
+    { header: 'Name', accessorKey: 'name' },
+    { header: 'Age', accessorKey: 'age' }
 ];
 
 const data = [
     { name: 'Alice', age: 25 },
-    { name: 'Bob', age: 30 },
-    // Add more data as needed
+    { name: 'Bob', age: 30 }
 ];
 
+
+
 function App() {
-    return <AdvancedTable columns={columns} data={data} />;
+    return (
+        <AdvancedTable
+            columns={columns}
+            data={data}
+            pageSize={10}
+            onColumnOrderChange={(newOrder) => console.log(newOrder)}
+        />
+    );
 }
 ```
+
+## Props
+
+- `data`: Array of row data
+- `columns`: Array of column definitions
+- `pageSize`: Number of rows per page (default: 10)
+- `className`: Container class name
+- `tableClassName`: Table class name
+- `headerClassName`: Header class name
+- `rowClassName`: Row class name
+- `cellClassName`: Cell class name
+- `onColumnOrderChange`: Callback for column order changes
 
 ## Documentation
 
